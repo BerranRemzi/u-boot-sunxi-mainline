@@ -24,4 +24,3 @@ jobs:
         run: |
           make CROSS_COMPILE=arm-linux-gnueabihf- Marsboard_A20_defconfig
           make CROSS_COMPILE=arm-linux-gnueabihf-
-        working-directory: path/to/u-boot # Replace with the actual path to your U-Boot source code
