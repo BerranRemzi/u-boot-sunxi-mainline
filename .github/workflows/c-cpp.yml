@@ -1,0 +1,20 @@
+name: Compile U-Boot
+
+on:
+  push:
+    branches: [ "wills/v2020.01-rc4+a20_200116b" ]
+  pull_request:
+    branches: [ "wills/v2020.01-rc4+a20_200116b" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Compile U-Boot for Marsboard A20
+      run: |
+        make CROSS_COMPILE=arm-linux-gnueabihf- Marsboard_A20_defconfig
+        make CROSS_COMPILE=arm-linux-gnueabihf-
+        
