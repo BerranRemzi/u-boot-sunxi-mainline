@@ -29,7 +29,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: Artifacts for Marsboard A20
+          name: Marsboard_A20
           path: |
             *.bin
             *.img
