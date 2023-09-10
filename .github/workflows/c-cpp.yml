@@ -26,3 +26,10 @@ jobs:
           make clean
           make CROSS_COMPILE=arm-linux-gnueabihf- Marsboard_A20_defconfig
           make CROSS_COMPILE=arm-linux-gnueabihf-
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Artifacts for Marsboard A20
+          path: |
+            *.bin
+            *.img
