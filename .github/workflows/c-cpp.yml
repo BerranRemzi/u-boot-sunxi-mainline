@@ -20,7 +20,7 @@ jobs:
           sudo apt-get install -y build-essential
         shell: bash
 
-      - name: Compile U-Boot for Marsboard A20
-        run: |
-          make CROSS_COMPILE=arm-linux-gnueabihf- Marsboard_A20_defconfig
-          make CROSS_COMPILE=arm-linux-gnueabihf-
+      - name: Compile Marsboard A20 configuration
+        run: make CROSS_COMPILE=arm-linux-gnueabihf- Marsboard_A20_defconfig
+      - name: Compile U-Boot
+        run: make CROSS_COMPILE=arm-linux-gnueabihf-
